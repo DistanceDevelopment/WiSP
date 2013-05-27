@@ -8,8 +8,8 @@
 #  ------------------   Functions associated with density  ---------------------
 
 .First.lib <- function(lib, pkg) {
-cat("Welcome to WiSP version 1.2.6-1\n")
-if (.Platform$OS.type=="windows" & interactive()) {
+packageStartupMessage("Welcome to WiSP version 1.2.6-2 January 2013\n")
+if (.Platform$OS.type=="windows" & interactive() & .Platform$GUI=="Rgui") {
 winMenuAdd("Interactive density")
 winMenuAddItem("Interactive density","Region", "my.region <- eval(parse(text=gen.reg()))")
 winMenuAddItem("Interactive density","Run F-Shake3D", "launch.FShake3D()")
