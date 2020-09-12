@@ -41,7 +41,7 @@ sim.plot<-function(sim, est="Nhat.grp", type="both", breaks="Sturges", ...)
 {
  if(type!="box" & type!="hist" & type!="both") stop("Parameter type must be 'box' or 'hist' or 'both'\n.")
  if(length(est)>1) stop("Only one estimate can be plotted at a time.")
-# stat is also in summary.point.sim() – any changes here should occur there too
+# stat is also in summary.point.sim() ? any changes here should occur there too
  stat<-c("Group Abundance",
          "Animal Abundance",
          "Mean Group size",
@@ -124,7 +124,7 @@ summary.point.sim<-function(sim, est=c("Nhat.grp","Nhat.ind","Es"), add.text=NUL
  if(!is.null(add.text)) cat(add.text,"\n\n")
      cat("Variable name               Summary statistics\n")
      cat("----------------------    --------------------------------------------------------\n")
-# stat is also in sim.plot() – any changes here should occur there too
+# stat is also in sim.plot() ? any changes here should occur there too
  stat<-c("Group Abundance      :",
          "Animal Abundance     :",
          "Mean Group size      :",
