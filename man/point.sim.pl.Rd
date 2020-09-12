@@ -21,7 +21,7 @@
 }
 \value{
 An object of class point.sim.ce with the following elements:
-  \item{A results matrix, each row of which contains the following values:}
+  \item{est}{A results matrix, each row of which contains the following values:}
   \item{Nhat.grp}{MLE of group abundance}
    \item{Nhat.ind}{MLE of individual abundance (= Nhat.grp * Es)}
    \item{Es}{Estimate of mean group size (simple mean of observed group sizes)}
