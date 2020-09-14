@@ -1363,7 +1363,7 @@ int.est.crMt<-function (samp, init.N = -1, ci.type = "boot.nonpar", nboot = 999,
    if (ninvalid > 0) 
      warning(paste(as.character(ninvalid), " inadmissable estimates omitted from bootstrap results."))
    civec <- rep(NA, length(vlevels))
-#  careful with coding the next line – depends on which estimates are vectors and which scalars
+#  careful with coding the next line ? depends on which estimates are vectors and which scalars
 #  (in this function only phat is a vector):
    ci <- list(Nhat.grp=civec, Nhat.ind=civec, phat=matrix(rep(civec,n.occ), nrow=n.occ, ncol=length(vlevels), 
             dimnames = list(dimnames(b.phat)[[2]], rep("", 2))), Es = civec)
@@ -1530,7 +1530,7 @@ int.est.crMb<-function (samp, init.N= -1, ci.type="boot.nonpar", nboot=999, vlev
    if (ninvalid > 0) 
      warning(paste(as.character(ninvalid), " inadmissable estimates omitted from bootstrap results."))
    civec <- rep(NA, length(vlevels))
-#  careful with coding the next line – depends on which estimates are vectors and which scalars
+#  careful with coding the next line ? depends on which estimates are vectors and which scalars
 #  (in this function only phat is a vector):
    ci <- list(Nhat.grp=civec, Nhat.ind=civec, phat=matrix(rep(civec,2), nrow=2, ncol=length(vlevels), 
             dimnames = list(dimnames(b.phat)[[2]], rep("", 2))), Es = civec)
@@ -1675,7 +1675,7 @@ int.est.crMh<-function (samp, num.mix=2, init.N= -1, ci.type="boot.nonpar",
    if (ninvalid > 0) 
      warning(paste(as.character(ninvalid), " inadmissable estimates omitted from bootstrap results."))
    civec <- rep(NA, length(vlevels))
-#  careful with coding the next line – depends on which estimates are vectors and which scalars
+#  careful with coding the next line ? depends on which estimates are vectors and which scalars
 #  (in this function only phat is a vector):
    ci <- list(Nhat.grp=civec, Nhat.ind=civec, phat=matrix(rep(civec,num.mix), nrow=num.mix, ncol=length(vlevels), 
             dimnames = list(dimnames(b.phat)[[2]], rep("", 2))), Es = civec)
@@ -1826,7 +1826,7 @@ summary.point.sim.crM0<-function(sim, est=c("Nhat.grp","Nhat.ind","Es"), digits=
    if(!is.point.sim.crM0(sim)) 
    stop("Argument <sim>. must be of class point.sim.crM0\n")
    addtext1<-paste("Numerical estimator?            = ",sim$numerical,"\n", sep="")
-   addtext2<-paste("Use Chapman’s Estimator?        = ",sim$Chapmod,"\n", sep="")
+   addtext2<-paste("Use Chapman's Estimator?        = ",sim$Chapmod,"\n", sep="")
    addtext3<-paste("Starting N for numerical search = ",sim$init.N,"\n", sep="")
    addtext<-paste(addtext1, addtext2, addtext3, sep="")
    summary.point.sim(sim, est=est, add.text=addtext, digits=digits)
