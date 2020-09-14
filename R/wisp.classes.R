@@ -113,13 +113,13 @@ is.wisp.class<-function(obj)
 cdate<-function(obj.name)
 #------------------------------------------------------------------------------
 # Returns creation date of an object from a character variable (a scalar) 
-# containing its name – if the object is a list with component $created, 
+# containing its name ? if the object is a list with component $created, 
 # else returns "NA".
 #------------------------------------------------------------------------------
 {
  created<-"NA"
  obj<-eval(parse(text=obj.name))
- if(!is.list(obj)) stop("Object ",obj.name," is not a list – function cdate requires a list.")
+ if(!is.list(obj)) stop("Object ",obj.name," is not a list? function cdate requires a list.")
  else if(is.element("created",names(obj))) created<-obj$created
  created
 }
